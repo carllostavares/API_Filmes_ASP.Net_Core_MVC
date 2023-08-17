@@ -35,6 +35,6 @@ public class FilmeController : Controller
     {
         var filme = filmes.FirstOrDefault(filme => filme.Id == id);
         if (filme == null) return NotFound();
-        return Ok();
+        return Ok(filme);
     }
 }
