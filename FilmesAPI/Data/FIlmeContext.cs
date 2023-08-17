@@ -1,6 +1,17 @@
-﻿namespace FilmesAPI.Data
+﻿
+
+using FilmesAPI.Models;
+using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography.X509Certificates;
+
+namespace FilmesAPI.Data;
+
+public class FIlmeContext : DbContext
 {
-    public class FIlmeContext
+    public FIlmeContext(DbContextOptions<FIlmeContext> opts) : base(opts)
     {
+       
     }
+
+    public DbSet<Filme> Filmes { get; set; }
 }
