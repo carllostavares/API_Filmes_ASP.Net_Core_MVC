@@ -4,6 +4,10 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var connectionString = builder.Configuration.GetConnectionString("FilmeConnection");
+
+builder.Services.AddDbContext<FIlmeContext>(opts => 
+opts.UseMySql(connectionString,ServerVersion.AutoDetect(connectionString)));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
