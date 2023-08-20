@@ -6,9 +6,9 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace FilmesAPI.Data;
 
-public class FIlmeContext : DbContext
+public class FilmeContext : DbContext
 {
-    public FIlmeContext(DbContextOptions<FIlmeContext> opts) : base(opts)
+    public FilmeContext(DbContextOptions<FilmeContext> opts) : base(opts)
     {
        
     }
