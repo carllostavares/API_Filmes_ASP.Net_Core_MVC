@@ -35,10 +35,10 @@ public class FilmeController : Controller
     }
 
     [HttpGet]
-    public IEnumerable<Filme> RecuperarFilmes([FromQuery] int skip = 0,
+    public IEnumerable<ReadFilmeDto> RecuperarFilmes([FromQuery] int skip = 0,
         [FromQuery] int take =10)
     {
-        return _context.Filmes.Skip(skip).Take(take);
+        return _mapper.Map<List<ReadFilmeDto>>(_context.Filmes.Skip(skip).Take(take));
     }
 
     [HttpGet("{id}")]
@@ -46,6 +46,7 @@ public class FilmeController : Controller
     {
         var filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
         if (filme == null) return NotFound();
+        var filmeDto = _mapper.Map<ReadFilmeDto>(filme);
         return Ok(filme);
     }
 
@@ -61,7 +62,7 @@ public class FilmeController : Controller
         return NoContent();
     }
 
-    [HttpPatch("id")]
+    [HttpPatch("{id}")]
     public IActionResult AtualizaFilmeParcial(int id,
         JsonPatchDocument<UpdateFilmeDto> patch)
 
@@ -83,4 +84,15 @@ public class FilmeController : Controller
         return NoContent();
     }
 
+    [HttpDelete("{id}")]
+    public IActionResult DeletaFilme(int id)
+    {
+        var filme = _context.Filmes.FirstOrDefault(filme => filme.Id == id);
+        if (filme == null) return NotFound();
+        _context.Remove(filme);
+        _context.SaveChanges();
+         return NoContent();
+
+
+    }
 }
