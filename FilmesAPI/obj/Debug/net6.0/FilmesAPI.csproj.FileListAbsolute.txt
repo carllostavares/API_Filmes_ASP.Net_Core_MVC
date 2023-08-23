@@ -86,3 +86,7 @@ C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\Filmes
 C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\AutoMapper.dll
 C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\carlo\OneDrive\Área de Trabalho\Atividade\API-Filmes ASP.NetMVC\FilmesAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
